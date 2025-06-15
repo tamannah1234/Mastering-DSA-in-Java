@@ -1,1 +1,29 @@
+**********************Learnt how to convert form ArrayList to Array int []*******************************************
+import java.util.*;
+public class FindDivisor {
+    public static int [] divisors(int n){
+      ArrayList<Integer> arr = new ArrayList<>();
+      for(int i=1;i<=n;i++){
+        if(n %i==0){
+            arr.add(i);
+        }
+      }
+      //***************to convert Arrylist to int[]
+      int []result = new int[arr.size()];
+      for(int i=0;i<arr.size();i++){
+        result[i]=arr.get(i);
+      }
+      return result;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int []num=divisors(n);
+        for(int e:num){
+        System.out.print(e + " ");
+        }
 
+        sc.close();
+    
+    }
+}
