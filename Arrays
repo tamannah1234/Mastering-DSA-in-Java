@@ -1,0 +1,59 @@
+Problem 1:*********** Brute force ******Tc: 0(N) Sc 0(N)*************
+public class MoveZeroEnd {
+    public static int[] moveZeroAtEnd(int []arr){
+        int n = arr.length;
+        int temp[]= new int[n];
+        int indx = 0;
+        for(int i=0;i<n;i++){
+            if(arr[i] != 0){
+              temp[indx++] =  arr[i];
+            }
+        }
+
+        for(int i=0;i<n;i++){
+            arr[i] = temp[i];
+        }
+        return arr;
+    }
+    public static void main(String[] args) {
+        int []arr = {0, 1, 4, 0, 5, 2};
+        int nums[]=moveZeroAtEnd(arr);
+        for(int val : nums){
+            System.out.print(val + " ");
+        }
+    }
+}
+
+*********Optimal force ******Tc: 0(N) Sc: 0(1)*************
+class Solution {
+    public void moveZeroes(int[] arr) {
+        int n = arr.length;
+        int j = -1;
+
+        // Find the first zero
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == 0) {
+                j = i;
+                break;
+            }
+        }
+
+        // If no zero found, array is already optimal
+        if (j == -1) return;
+
+        // Traverse from j+1 to end
+        for (int i = j + 1; i < n; i++) {
+            if (arr[i] != 0) {
+                // Swap arr[i] with arr[j]
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                j++; // Move j to next zero
+            }
+        }
+    }
+}
+
+
+
+
