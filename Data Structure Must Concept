@@ -1,0 +1,208 @@
+Pattern Sheet (TUF+)
+Disclaimer: The sheet belongs to takeUforward. Please do not redistribute or republish this content without permission from takeUforward.
+Arrays
+2-pointers
+Two Sum (Sorted)
+3Sum
+4Sum
+Sliding Window
+Maximum Subarray (Kadane’s Algorithm)
+Minimum Size Subarray Sum
+Longest Subarray with Sum K
+Sorting and Reordering
+Sort Colors (Dutch National Flag)
+Move Zeroes
+Rotate Array
+Merge Sort
+Count Inversions
+Reverse Pairs
+
+Voting Algorithm
+Majority Element (> N/2 times)
+Majority Element (> N/3 times)
+
+Hashing
+Frequency & Set
+Two Sum (Hashing)
+Valid Anagram
+Longest Consecutive Sequence
+Subarray with Prefix Sum + HashMap
+Subarray Sum Equals K
+Count Subarrays with Equal Number of 0’s and 1’s
+Longest Subarray with Equal 0s and 1s
+Binary Search
+Bound Problems
+Lower bound
+Upper bound
+Number of Occurrences  
+
+Simple BS
+Find Peak Element
+Search in Rotated Sorted Array
+On Answers
+Aggressive Cows
+Allocate Minimum Number of Pages
+Koko Eating Bananas
+Minimum Days to Make M Bouquets
+2D
+Search in a 2D Matrix
+Search in a 2D Matrix - II
+
+Recursion
+Subsequence
+Combination Sum
+Combination Sum II
+Combination Sum III
+
+Backtracking
+
+N Queens
+Sudoku Solver
+
+LinkedList
+Pointer Techniques
+Reverse a Linked List
+Detect Cycle in a Linked List
+Merge Two Sorted Lists
+Find the intersection point of Y linkedlist
+Check if LL is palindrome or not
+Length of loop in LL
+Advanced  
+Sort LL
+Clone a LL
+Flattenning of LL
+
+Greedy Algorithms
+Interval Scheduling
+N Meetings in One Room
+Minimum Number of Platforms
+Merge Intervals
+Optimization via Sorting
+Fractional Knapsack
+Job Sequencing Problem
+Sliding Window
+Fixed Window Size
+Max Sum Subarray of Size K
+Longest Substring of All 1s After K Flips
+Variable Window Size
+Minimum Window Substring
+Longest Substring Without Repeating Characters
+Substring with K Distinct Character
+Counting in Window
+Number of Substrings Containing All Three Characters
+Binary Subarrays With Sum
+Count number of Nice subarrays
+
+Stack/Queue
+Monotonic Stack
+Next Greater Element
+Trapping Rain Water
+Asteroid Collision
+Remove K Digits
+Cache
+LRU Cache
+LFU Cache
+Binary Tree
+Traversal
+Inorder, Preorder, Postorder
+Level Order, Zigzag Level Order
+Morris Traversals 
+Tree Views
+Vertical Order
+Top View
+Bottom View
+Tree Properties
+Height of Binary Tree
+Diameter of Binary Tree
+Balanced Binary Tree
+Tree Construction
+Construct Binary Tree from Inorder and Preorder
+Construct Binary Tree from Inorder and Postorder
+Construct Binary Tree from Level Order and Inorder
+Binary Search Tree
+Core BST Operations
+Validate BST
+Kth Smallest Element in BST
+Delete Node in BST
+Lowest Common Ancestor
+Two sum in BST
+LCA in BST
+Heaps
+Heapify
+Heapify Algorithm
+Heap Sort
+Build heap from a given Array
+Implement Min Heap
+Kth Element Problems
+Kth Largest Element
+Top K Frequent Elements
+Graphs
+Traversals
+BFS
+DFS
+Number of Provinces
+Number of Islands
+Cycle Detection
+Detect Cycle in Directed Graph
+Detect Cycle in Undirected Graph
+Topological Sort
+Topological Sort (BFS - Kahn's Algorithm)
+Course Schedule
+Detect Cycle in Directed Graph via Topo Sort
+Course Schedule II
+Alien Dictionary
+Word Ladder
+Word Ladder II
+Shortest Path Algorithms
+Dijkstra’s Algorithm
+Shortest Path in DAG
+Bellman-Ford Algorithm
+Cheapest flight within K stops
+Floyd warshall algorithm
+MST
+Disjoint Set
+Kruskal Algorithm
+Prim’s Algorithm
+Number of operations to make network connected
+Accounts merge
+Number of islands II
+Most stones removed with same row or column
+
+Dynamic Programming
+1D/2D
+Climbing Stairs
+House robber
+Ninja’s training
+DP on Grids
+Grid unique paths
+Grid unique paths II
+Cherry pickup II
+DP on Stocks
+Best time to buy and sell stock I to V
+DP on Subsequences
+Subset sum equals to target
+Partition a set into two subsets with minimum absolute sum difference
+0 and 1 Knapsack
+Target sum
+Unbounded knapsack
+LIS
+Longest Increasing Subsequence (Also print it)
+Longest Bitonic Subsequence
+
+DP on Strings
+Longest common subsequence
+Minimum insertions to make string palindrome
+Edit distance
+
+MCM DP
+Matrix chain multiplication
+Burst balloons
+
+Tries
+Basic Trie Operations
+Insert/Search/StartsWith
+Longest Word With All Prefixes
+Trie-Based Problem Patterns
+Longest Common Prefix
+Word Search II
+Replace Words
