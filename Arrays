@@ -55,5 +55,50 @@ class Solution {
 }
 
 
+//***********Approach 1 : Using HashSet  
+//Approach 2 : Using Two pointers*********************************
+
+import java.util.HashSet;
+public class L_Arr_RemoveDuplicates {
+    public static int removeDuplicates(int arr[],int n){
+       int i = 0;
+          for(int j=1;j<n;j++){
+            if(arr[j] != arr[i]){
+                arr[i+1] = arr[j];
+                i++;
+            }
+          }
+          return i+1; 
+    }
+    public static void printelement(int arr[],int size){
+          for(int k=0;k<size;k++){
+            System.out.print(arr[k] + " ");
+       }
+    }
+
+    public static void main(String[] args) {
+        int []arr = {1,1,2,2,3,3,4};
+        int n = arr.length;
+        int size=removeDuplicates(arr,n);
+        printelement(arr,size);
+        //store distinct element in the array
+        /*
+       HashSet<Integer> hs = new HashSet<>();
+       for(int i=0;i<n;i++){
+        hs.add(arr[i]);
+       }
+       int indx = 0;
+       for(int ele : hs){
+       arr[indx] = ele ;
+       indx++;
+       }
+     
+       for(int i=0;i<indx;i++){
+         System.out.print(arr[i] + " ");
+       }
+          */
+
+    }
+}
 
 
