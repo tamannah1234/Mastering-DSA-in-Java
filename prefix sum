@@ -1,0 +1,55 @@
+//Basics: Just need to print prefix sum
+//Intermediate: Print custom index prefix sum
+//Find Subarray with K sum 
+
+public class L_Arr_PrefixSum {
+    public static int[] findPrefixSum(int []arr,int n,int []prefixSum){
+        prefixSum[0]= arr[0];
+        for(int i=1;i<n;i++){
+            prefixSum[i]=prefixSum[i-1]+arr[i];
+        }
+        return prefixSum;
+    }
+
+    public static int sumRange(int []prefixSum,int L,int R){
+        if(L==0) return prefixSum[R];
+        return prefixSum[R]-prefixSum[L-1];
+    }
+    public static void main(String[] args) {
+        int []arr = {0,1,2,3,4,5,6};
+        int n = arr.length;
+        int prefixSum[] = new int [n];
+        int[]val =findPrefixSum(arr,n,prefixSum);
+        for(int ele : val){
+          System.out.println(ele);
+        }
+      System.out.println("Result "+sumRange(prefixSum,0,2)); 
+     System.out.println("Result "+sumRange(prefixSum,1,1)); 
+    }
+}
+//Question3:
+import java.util.HashSet;
+import java.util.Set;
+
+public class L_Arr_PrefixSumType3 {
+    public static boolean hasSubarrayWithSumK(int[] arr, int k) {
+        Set<Integer> set = new HashSet<>();
+        int prefixSum = 0;
+        set.add(0); // Important for exact match
+
+        for (int num : arr) {
+            prefixSum += num;
+            if (set.contains(prefixSum - k)) return true;
+            set.add(prefixSum);
+        }
+
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 4, 20, 3, 10, 5};
+        int k = 33;
+        System.out.println(hasSubarrayWithSumK(arr, k)); // true (20+3+10)
+    }
+}      
+
