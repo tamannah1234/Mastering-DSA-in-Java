@@ -1,0 +1,17 @@
+//****************PowerSet Problem******************
+
+public static void printPowerSet(String[] set) {
+    int n = set.length;
+    int powerSetSize = 1 << n;  // 2^n subsets
+
+    for (int i = 0; i < powerSetSize; i++) {
+        System.out.print("{ ");
+        for (int j = 0; j < n; j++) {
+            // Check if jth bit in i is set
+            if ((i & (1 << j)) > 0) {
+                System.out.print(set[j] + " ");
+            }
+        }
+        System.out.println("}");
+    }
+}
