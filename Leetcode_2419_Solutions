@@ -1,0 +1,43 @@
+**Intuition**
+The bitwise AND of a subarray will always be less than or equal to the smallest number in that subarray.
+So, to get the maximum possible AND, we need to consider subarrays where all elements are equal to the maximum element in the array.
+Hence, the answer lies in finding the longest contiguous subarray consisting only of the maximum element.
+
+**Approach**
+Find the maximum value in the array using max(nums).
+Initialize two counters:
+cnt to count the current streak of consecutive elements equal to max.
+ans to keep track of the longest such streak.
+Traverse the array:
+If the current element equals the maximum value, increment cnt.
+Otherwise, reset cnt to 0.
+After each update, set ans = max(ans, cnt).
+Return ans as the result.
+Complexity
+Time complexity:
+O(n)
+We perform two passes — one to find the maximum value, and another to compute the longest subarray.
+
+Space complexity:
+O(1)
+Only constant extra space is used for variables.
+
+**Code**
+class Solution {
+    public int longestSubarray(int[] nums) {
+    int maxi = 0;
+    for(int num : nums){
+        maxi = Math.max(maxi,num);
+    }
+    int ans =0; int count =0;
+    for(int x : nums){
+        if(x==maxi){
+            count++;
+            ans= Math.max(ans,count);
+        }else{
+             count=0;
+        }
+    } 
+    return ans;  
+    }
+}
