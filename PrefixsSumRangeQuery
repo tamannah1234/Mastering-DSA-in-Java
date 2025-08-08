@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main {
+
+    // Prefix Sum Method
+    public static ArrayList<Integer> prefSum(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(arr[0]); // first element
+
+        for (int i = 1; i < arr.length; i++) {
+            list.add(list.get(i - 1) + arr[i]);
+        }
+
+        return list;
+    }
+
+    // Range Query Method
+    public static int rangeQuery(ArrayList<Integer> list, int l, int r) {
+        if (l == 0) return list.get(r);
+        return list.get(r) - list.get(l - 1);
+    }
+
+    // Main Method
+    public static void main(String[] args) {
+        // Main obj = new Main(); // Create object to access non-static methods
+
+        int[] arr = {3, 6, 2, 8, 9, 4};
+        int[][] queries = {
+            {0, 2},  // sum = 3 + 6 + 2 = 11
+            // {1, 4},  // sum = 6 + 2 + 8 + 9 = 25
+            // {3, 5}   // sum = 8 + 9 + 4 = 21
+        };
+
+        ArrayList<Integer> prefix = prefSum(arr);
+
+        for (int[] query : queries) {
+            int l = query[0];
+            int r = query[1];
+            int sum = rangeQuery(prefix, l, r);
+            System.out.println("Sum from index " + l + " to " + r + " = " + sum);
+        }
+    }
+}
