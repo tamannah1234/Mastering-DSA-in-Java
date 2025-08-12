@@ -25,3 +25,35 @@ public class Main {
       
   }
 }
+
+
+
+************************TwoSum Problems Using HashMap*********************
+**Time complexity: O(N)  Space Compexity: O(N)**
+
+import java.util.*;
+
+public class Main {
+   public static int[] twoSum(int []arr,int target){
+     HashMap<Integer,Integer> map = new HashMap<>();
+     //put() append ele get() get index of that StackTraceElement
+     for(int i=0;i<arr.length;i++){
+       int reqElement = target-arr[i];
+       if(map.containsKey(reqElement)){
+         return new int[] {map.get(reqElement),i};
+       }
+       map.put(arr[i],i);
+     }
+     return new int[] {-1,-1};
+   }
+  
+    public static void main(String[] args) {
+      int []arr = {2, 7, 11, 15};
+     int  target = 26;
+     int val[]= twoSum(arr,target);
+     for(int num : val){
+       System.out.print("[" + num + "]");
+     }
+      
+  }
+}
