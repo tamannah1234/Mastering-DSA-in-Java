@@ -1,5 +1,6 @@
 
 ************************TwoSum Problems Using Two Pointer*********************
+**Time complexity: O(N^2)  Space Compexity: O(N)**
 import java.util.*;
 
 public class Main {
