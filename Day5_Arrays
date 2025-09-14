@@ -1,0 +1,57 @@
+import java.util.*;
+
+/*******************: Find GCD and LCM of two numbers***********************/
+
+public class Main {
+    public static int gcdOfNums(int n1,int n2){
+      
+    while(n2 !=0){
+      int temp = n2;
+      n2 = n1 % n2;
+      n1=temp;
+    } 
+    return n1;
+    }
+    public static int lcmOfNums(int n1,int n2){
+      return (n1*n2)/gcdOfNums(n1,n2);
+    }
+    public static void main(String[] args) {
+      int n1=12,n2=18;
+      int res = gcdOfNums(n1,n2);
+      int res2 = lcmOfNums(n1,n2);
+      
+      System.out.println(res); 
+      System.out.println(res2);
+
+}
+
+  }
+
+
+/**********************Find if a pair exists with a given sum************************/
+ public static boolean isPairSum(int[]arr,int k){
+      HashSet<Integer> set = new HashSet<>();
+      for(int num : arr){
+        if(set.contains(k-num))return true;
+        set.add(num);
+      }
+      return false;
+
+
+
+/*************************Reverse an Array******************************************************/
+
+public static int[]reverseArr(int[]arr){
+
+    int left =0; int right=arr.length-1;
+    while(left<right){
+    int temp = arr[left];
+    arr[left]= arr[right];
+    arr[right]=temp;
+    
+    left++;
+    right--;
+    }
+    return arr;
+    }
+    }
