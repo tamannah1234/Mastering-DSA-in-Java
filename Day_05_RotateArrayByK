@@ -30,3 +30,52 @@ public class Main {
       
 }
 }
+
+
+
+/*******************Right rotate array by k***************************************/
+import java.util.*;
+
+public class Main {
+
+    // Utility function to reverse a portion of the array
+    public static void reverse(int[] arr, int start, int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    // Right Rotate array by k positions
+    public static void rightRotate(int[] arr, int n, int k) {
+        k = k % n; // handle k > n
+
+        // Step 1: reverse last k elements
+        reverse(arr, n - k, n - 1);
+
+        // Step 2: reverse first n-k elements
+        reverse(arr, 0, n - k - 1);
+
+        // Step 3: reverse whole array
+        reverse(arr, 0, n - 1);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        int n = arr.length;
+        int k = 9; // rotate by 9 -> effectively 2
+
+        rightRotate(arr, n, k);
+
+        // Print result
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+
