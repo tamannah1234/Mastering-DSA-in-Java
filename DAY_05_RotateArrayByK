@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main {
+  
+    public static void rotateArraybyK(int []arr,int n,int k){
+    //temp[]
+    int temp[]=new int[k];
+    k = k%n;
+    for(int i=0;i<k;i++){
+      temp[i]=arr[i];
+    }
+    //shifting
+    for(int i=k;i<n;i++){
+     arr[i-k]=arr[i]; 
+    }
+    //storing temp
+    for(int i=0;i<k;i++){
+      arr[n-k+i]=temp[i];
+    }
+     
+    }
+    public static void main(String[] args) {
+      int []arr = {1,2,3,4,5,6,7,8};
+      int n=arr.length;
+      int k=2;
+      rotateArraybyK(arr,n,k);
+      for(int num : arr){
+        System.out.print(num + " ");
+      }
+      
+}
+}
