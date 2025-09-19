@@ -1,0 +1,47 @@
+/**********************//[1]Move Zeros to End
+//[2]Remove duplicates from sorted array
+//[3]Find missing number
+//[4]Union of two sorted arrays
+//[5]Intersection of two sorted arrays**************************/
+
+[#]Brute force Approach
+class Solution {
+    public void moveZeroes(int[] arr) {
+        int n = arr.length;
+        int[] temp = new int[n];
+        int index = 0;
+
+        // Step 1: Copy non-zero elements to temp
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0) {
+                temp[index++] = arr[i];
+            }
+        }
+
+        // Step 2: Put temp elements into original array
+        for (int i = 0; i < index; i++) {
+            arr[i] = temp[i];
+        }
+
+        // Step 3: Fill remaining with zero
+        for (int i = index; i < n; i++) {
+            arr[i] = 0;
+        }
+    }
+}
+[#]Optimal Approach
+public static void moveZerosEnd(int arr[], int n) {
+    int j = 0;
+    
+    // Step 1: Shift non-zero elements forward
+    for (int i = 0; i < n; i++) {
+        if (arr[i] != 0) {
+            arr[j++] = arr[i];
+        }
+    }
+
+    // Step 2: Fill the rest with zeros
+    while (j < n) {
+        arr[j++] = 0; // <-- increment j
+    }
+}
