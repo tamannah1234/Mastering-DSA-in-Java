@@ -1,0 +1,26 @@
+public class Main
+{
+    public static int findMaxSumSubarray(int []arr,int k){
+      int windowSum = 0;
+      int maxSum=Integer.MIN_VALUE;
+      for(int i=0;i<k;i++){
+          windowSum += arr[i];
+      }
+      
+      maxSum = windowSum;
+      for(int i=k;i<arr.length;i++){
+          windowSum += arr[i]-arr[i-k];
+          maxSum = Math.max(windowSum,maxSum);
+      }
+      return maxSum;
+    }
+    
+    //[a,i,k,q,r,o]; k=4  o/p:2
+	public static void main(String[] args) {
+	//	System.out.println("Hello World");
+	int []arr = {1,2,3,4,5,6,7};
+	int k=4;
+	int res = findMaxSumSubarray(arr,k);
+	System.out.println(res);
+	}
+}
