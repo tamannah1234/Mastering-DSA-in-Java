@@ -1,0 +1,41 @@
+public class Main {
+
+    public static boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' ||
+               ch == 'o' || ch == 'u';
+    }
+
+    public static int maxVowels(char[] arr, int k) {
+        int vowelCount = 0;
+        int maxVowels = 0;
+
+        // First window
+        for (int i = 0; i < k; i++) {
+            if (isVowel(arr[i])) {
+                vowelCount++;
+            }
+        }
+
+        maxVowels = vowelCount;
+
+        // Sliding window
+        for (int i = k; i < arr.length; i++) {
+            if (isVowel(arr[i])) {
+                vowelCount++;
+            }
+            if (isVowel(arr[i - k])) {
+                vowelCount--;
+            }
+            maxVowels = Math.max(maxVowels, vowelCount);
+        }
+
+        return maxVowels;
+    }
+
+    public static void main(String[] args) {
+        char[] arr = {'a', 'i', 'k', 'q', 'r', 'o'};
+        int k = 4;
+
+        System.out.println(maxVowels(arr, k)); // Output: 2
+    }
+}
